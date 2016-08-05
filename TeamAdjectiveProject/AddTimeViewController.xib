@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTimeViewController" customModule="Wait_For_It" customModuleProvider="target">
+            <connections>
+                <outlet property="addTimeDatePicker" destination="6Ao-mn-B68" id="HGu-AW-MdJ"/>
+                <outlet property="doneWaitingButton" destination="sI6-DY-8ik" id="drc-yU-tEf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add more time?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0GT-PU-72G">
+                    <rect key="frame" x="0.0" y="100" width="375" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.1803921568627451" green="0.25098039215686274" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ao-mn-B68">
+                    <rect key="frame" x="0.0" y="230" width="375" height="216"/>
+                    <date key="date" timeIntervalSinceReferenceDate="489951432.92836303">
+                        <!--2016-07-11 17:37:12 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sI6-DY-8ik">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <color key="backgroundColor" red="0.031372549019607843" green="0.23921568627450979" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="hKp-Aa-lmA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <state key="normal" title="Done Waiting!">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onDoneWaiting:" destination="-1" eventType="touchUpInside" id="LWz-Bj-e4V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dV-Fm-UAp">
+                    <rect key="frame" x="0.0" y="476" width="375" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="Add Time">
+                        <color key="titleColor" red="0.0" green="0.66666666666666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onAddTime:" destination="-1" eventType="touchUpInside" id="jab-pW-CoI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-5K-q0i">
+                    <rect key="frame" x="8" y="15" width="57" height="30"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleColor" red="0.0" green="0.66666666666666663" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onSettings:" destination="-1" eventType="touchUpInside" id="9GL-Xg-GI3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="5dV-Fm-UAp" firstAttribute="top" secondItem="6Ao-mn-B68" secondAttribute="bottom" constant="30" id="77n-9I-SVY"/>
+                <constraint firstAttribute="trailing" secondItem="0GT-PU-72G" secondAttribute="trailing" id="97M-6h-V8J"/>
+                <constraint firstItem="0GT-PU-72G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="9Hq-cF-pM7"/>
+                <constraint firstItem="sI6-DY-8ik" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DRB-mW-ZyK"/>
+                <constraint firstAttribute="bottom" secondItem="sI6-DY-8ik" secondAttribute="bottom" id="LHR-MK-cLc"/>
+                <constraint firstItem="0GT-PU-72G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YAE-A5-vc9"/>
+                <constraint firstItem="5dV-Fm-UAp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="deI-b5-VPv"/>
+                <constraint firstAttribute="trailing" secondItem="5dV-Fm-UAp" secondAttribute="trailing" id="jk3-Fc-hi2"/>
+                <constraint firstAttribute="trailing" secondItem="6Ao-mn-B68" secondAttribute="trailing" id="lK1-ew-J6q"/>
+                <constraint firstItem="6Ao-mn-B68" firstAttribute="top" secondItem="0GT-PU-72G" secondAttribute="bottom" constant="100" id="nFc-wx-y7I"/>
+                <constraint firstAttribute="trailing" secondItem="sI6-DY-8ik" secondAttribute="trailing" id="oDi-sE-pFg"/>
+                <constraint firstItem="6Ao-mn-B68" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wq4-Mr-HaX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="479.5" y="320.5"/>
+        </view>
+    </objects>
+</document>

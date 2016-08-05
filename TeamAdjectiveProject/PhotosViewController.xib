@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotosViewController" customModule="Wait_For_It" customModuleProvider="target">
+            <connections>
+                <outlet property="countdownView" destination="UZl-EQ-sqF" id="CRg-XY-j4v"/>
+                <outlet property="leftBarItem" destination="coG-pc-EZt" id="mbd-ZI-Nye"/>
+                <outlet property="navBar" destination="RQv-bZ-dOx" id="BKf-zH-AyV"/>
+                <outlet property="picturesView" destination="1Lq-t1-xlF" id="19F-Te-lGX"/>
+                <outlet property="rightBarItem" destination="IH8-xo-Fds" id="lci-Z5-JUs"/>
+                <outlet property="timeLabel" destination="HdI-If-Zmo" id="V6z-Wi-fpF"/>
+                <outlet property="timeProgressView" destination="mTk-pv-LT0" id="L08-Hy-Zki"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZl-EQ-sqF">
+                    <rect key="frame" x="0.0" y="65" width="600" height="33"/>
+                    <subviews>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mTk-pv-LT0">
+                            <rect key="frame" x="8" y="10" width="584" height="2"/>
+                        </progressView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-If-Zmo">
+                            <rect key="frame" x="286" y="17" width="29" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="mTk-pv-LT0" secondAttribute="trailing" constant="8" id="Dfr-I7-NP8"/>
+                        <constraint firstItem="mTk-pv-LT0" firstAttribute="leading" secondItem="UZl-EQ-sqF" secondAttribute="leading" constant="8" id="K99-xf-QA1"/>
+                        <constraint firstItem="HdI-If-Zmo" firstAttribute="centerX" secondItem="UZl-EQ-sqF" secondAttribute="centerX" id="PHQ-eA-PKd"/>
+                        <constraint firstItem="mTk-pv-LT0" firstAttribute="top" secondItem="UZl-EQ-sqF" secondAttribute="top" constant="10" id="vXv-36-Dks"/>
+                        <constraint firstAttribute="bottom" secondItem="HdI-If-Zmo" secondAttribute="bottom" id="x3k-Pq-d9Z"/>
+                        <constraint firstItem="HdI-If-Zmo" firstAttribute="top" secondItem="mTk-pv-LT0" secondAttribute="bottom" constant="5" id="zee-1X-WPu"/>
+                    </constraints>
+                </view>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQv-bZ-dOx">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
+                    <items>
+                        <navigationItem title="Photos" id="AcY-bC-Tlu">
+                            <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="coG-pc-EZt"/>
+                            <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="IH8-xo-Fds"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Lq-t1-xlF">
+                    <rect key="frame" x="0.0" y="114" width="600" height="400"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="RBZ-By-SQB"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1Lq-t1-xlF" secondAttribute="trailing" id="7dg-iC-6qr"/>
+                <constraint firstItem="UZl-EQ-sqF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OVi-fK-FhY"/>
+                <constraint firstItem="RQv-bZ-dOx" firstAttribute="baseline" secondItem="mTk-pv-LT0" secondAttribute="baseline" constant="-10" id="Q07-ak-dMN"/>
+                <constraint firstItem="1Lq-t1-xlF" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="14" id="azO-tW-SIT"/>
+                <constraint firstAttribute="trailing" secondItem="UZl-EQ-sqF" secondAttribute="trailing" id="cBY-uA-RVk"/>
+                <constraint firstItem="RQv-bZ-dOx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dts-aZ-ltY"/>
+                <constraint firstItem="1Lq-t1-xlF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fAx-C3-ePX"/>
+                <constraint firstItem="UZl-EQ-sqF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="fUb-hI-Gpd"/>
+                <constraint firstAttribute="trailing" secondItem="RQv-bZ-dOx" secondAttribute="trailing" id="hyY-LE-akg"/>
+                <constraint firstItem="RQv-bZ-dOx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rQP-8c-v0k"/>
+                <constraint firstItem="1Lq-t1-xlF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zkk-z0-cfz"/>
+            </constraints>
+            <point key="canvasLocation" x="217" y="526"/>
+        </view>
+    </objects>
+</document>

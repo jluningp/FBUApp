@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleViewController" customModule="Wait_For_It" customModuleProvider="target">
+            <connections>
+                <outlet property="articleTop" destination="szd-Nk-KcL" id="Or8-jF-H7c"/>
+                <outlet property="articleView" destination="UYw-o1-WBN" id="lHd-XK-JJA"/>
+                <outlet property="progressView" destination="Vzh-Yt-390" id="VDf-Rx-PPB"/>
+                <outlet property="timeView" destination="ryp-8g-wvG" id="wiO-QS-Kan"/>
+                <outlet property="view" destination="iN0-l3-epB" id="swj-N4-mXF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYw-o1-WBN">
+                    <rect key="frame" x="0.0" y="93" width="414" height="643"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="414" id="X5c-DI-egW"/>
+                    </constraints>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-Zg-4gB">
+                    <rect key="frame" x="0.0" y="60" width="414" height="33"/>
+                    <subviews>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-Yt-390">
+                            <rect key="frame" x="8" y="10" width="398" height="2"/>
+                        </progressView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryp-8g-wvG">
+                            <rect key="frame" x="193" y="17" width="29" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ryp-8g-wvG" firstAttribute="top" secondItem="Vzh-Yt-390" secondAttribute="bottom" constant="5" id="2cu-xL-k4Y"/>
+                        <constraint firstItem="ryp-8g-wvG" firstAttribute="centerX" secondItem="2Wi-Zg-4gB" secondAttribute="centerX" id="2uw-kW-PiH"/>
+                        <constraint firstAttribute="trailing" secondItem="Vzh-Yt-390" secondAttribute="trailing" constant="8" id="6in-bv-7pj"/>
+                        <constraint firstItem="Vzh-Yt-390" firstAttribute="leading" secondItem="2Wi-Zg-4gB" secondAttribute="leading" constant="8" id="Hix-kA-D61"/>
+                        <constraint firstItem="Vzh-Yt-390" firstAttribute="top" secondItem="2Wi-Zg-4gB" secondAttribute="top" constant="10" id="h94-R9-VqD"/>
+                        <constraint firstAttribute="bottom" secondItem="ryp-8g-wvG" secondAttribute="bottom" id="vr8-eA-43f"/>
+                        <constraint firstAttribute="height" constant="45" id="wvF-ha-5qv"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="wvF-ha-5qv"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Wi-Zg-4gB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" placeholder="YES" id="1Qv-vz-RQx"/>
+                <constraint firstAttribute="trailing" secondItem="UYw-o1-WBN" secondAttribute="trailing" id="8pf-hb-iA9"/>
+                <constraint firstAttribute="trailing" secondItem="2Wi-Zg-4gB" secondAttribute="trailing" id="Ogf-WE-bon"/>
+                <constraint firstItem="2Wi-Zg-4gB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dim-ty-IH8"/>
+                <constraint firstAttribute="bottom" secondItem="UYw-o1-WBN" secondAttribute="bottom" placeholder="YES" id="g3S-FQ-ggf"/>
+                <constraint firstItem="UYw-o1-WBN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ge4-C6-YD4"/>
+                <constraint firstItem="2Wi-Zg-4gB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ssC-bD-oeV"/>
+                <constraint firstItem="UYw-o1-WBN" firstAttribute="top" secondItem="2Wi-Zg-4gB" secondAttribute="bottom" id="szd-Nk-KcL"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ssC-bD-oeV"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

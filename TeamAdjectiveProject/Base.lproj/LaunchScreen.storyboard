@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait For It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-Df-fzC">
+                                <rect key="frame" x="0.0" y="126" width="375" height="81"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="44"/>
+                                <color key="textColor" red="0.047058823529411764" green="0.1803921568627451" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big-splash" translatesAutoresizingMaskIntoConstraints="NO" id="GhW-YF-z9q">
+                                <rect key="frame" x="87" y="187" width="201" height="388"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="193" id="4zr-5q-fLK"/>
+                                    <constraint firstAttribute="width" constant="201" id="6D9-8E-tJo"/>
+                                    <constraint firstAttribute="height" constant="388" id="dqd-mi-Vs0"/>
+                                    <constraint firstAttribute="height" constant="388" id="iad-k0-xE4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4zr-5q-fLK"/>
+                                        <exclude reference="dqd-mi-Vs0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GhW-YF-z9q" secondAttribute="trailing" constant="71" id="5i8-UB-Y69"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="87" id="5qz-2D-v12"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="71" id="9eG-LB-VYd"/>
+                            <constraint firstAttribute="trailing" secondItem="nBT-Df-fzC" secondAttribute="trailing" id="DHe-wj-dAK"/>
+                            <constraint firstItem="nBT-Df-fzC" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="106" id="FMx-tP-QBU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GhW-YF-z9q" secondAttribute="bottom" constant="160" id="FkJ-1C-bsd"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="91" id="HOX-ny-FRt"/>
+                            <constraint firstAttribute="trailing" secondItem="GhW-YF-z9q" secondAttribute="trailing" constant="91" id="OwN-mH-mJ8"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="71" id="PqK-O9-aUb"/>
+                            <constraint firstItem="nBT-Df-fzC" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bYe-WS-dxV"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="top" secondItem="nBT-Df-fzC" secondAttribute="bottom" constant="-20" id="dcE-OM-pCZ"/>
+                            <constraint firstItem="GhW-YF-z9q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="128" id="ii7-88-EQe"/>
+                            <constraint firstAttribute="trailing" secondItem="GhW-YF-z9q" secondAttribute="trailing" constant="87" id="jgi-Eb-195"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GhW-YF-z9q" secondAttribute="bottom" constant="92" id="lDA-ff-IsH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GhW-YF-z9q" secondAttribute="trailing" constant="71" id="xdu-lB-wRT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5i8-UB-Y69"/>
+                                <exclude reference="9eG-LB-VYd"/>
+                                <exclude reference="HOX-ny-FRt"/>
+                                <exclude reference="OwN-mH-mJ8"/>
+                                <exclude reference="PqK-O9-aUb"/>
+                                <exclude reference="ii7-88-EQe"/>
+                                <exclude reference="xdu-lB-wRT"/>
+                                <exclude reference="FkJ-1C-bsd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="big-splash" width="960" height="1274"/>
+    </resources>
+</document>

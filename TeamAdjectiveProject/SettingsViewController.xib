@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Wait_For_It" customModuleProvider="target">
+            <connections>
+                <outlet property="countdownView" destination="USy-De-phk" id="PXM-ey-aFf"/>
+                <outlet property="progressView" destination="UDM-iu-W50" id="wtn-QS-ICK"/>
+                <outlet property="settingsTableView" destination="qko-t4-QXK" id="Mep-hr-weK"/>
+                <outlet property="tableViewTop" destination="JoZ-ua-cZR" id="0Qg-V7-KJ7"/>
+                <outlet property="timeLabel" destination="NWf-Ry-fMP" id="Kxi-4G-Nkb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="qko-t4-QXK">
+                    <rect key="frame" x="0.0" y="43" width="600" height="557"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qzl-Bs-2uK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.031372549020000001" green="0.23921568630000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="Done Waiting!">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="donePressed:" destination="-1" eventType="touchUpInside" id="j98-K0-IDq"/>
+                        </connections>
+                    </button>
+                </tableView>
+                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="USy-De-phk">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="33"/>
+                    <subviews>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UDM-iu-W50">
+                            <rect key="frame" x="8" y="10" width="584" height="2"/>
+                        </progressView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWf-Ry-fMP">
+                            <rect key="frame" x="286" y="17" width="29" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="UDM-iu-W50" firstAttribute="leading" secondItem="USy-De-phk" secondAttribute="leading" constant="8" id="9WH-Eo-fxt"/>
+                        <constraint firstItem="NWf-Ry-fMP" firstAttribute="top" secondItem="UDM-iu-W50" secondAttribute="bottom" constant="5" id="S23-XP-Unp"/>
+                        <constraint firstAttribute="bottom" secondItem="NWf-Ry-fMP" secondAttribute="bottom" id="b1e-jg-lv1"/>
+                        <constraint firstItem="UDM-iu-W50" firstAttribute="top" secondItem="USy-De-phk" secondAttribute="top" constant="10" id="byv-ae-6EI"/>
+                        <constraint firstAttribute="trailing" secondItem="UDM-iu-W50" secondAttribute="trailing" constant="8" id="iQd-gK-Jee"/>
+                        <constraint firstItem="NWf-Ry-fMP" firstAttribute="centerX" secondItem="USy-De-phk" secondAttribute="centerX" id="ntb-uF-iFz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="USy-De-phk" secondAttribute="trailing" id="4rE-pD-NLN"/>
+                <constraint firstAttribute="bottom" secondItem="qko-t4-QXK" secondAttribute="bottom" placeholder="YES" id="Brr-9G-6yH"/>
+                <constraint firstItem="USy-De-phk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" placeholder="YES" id="JYQ-DW-knN"/>
+                <constraint firstItem="qko-t4-QXK" firstAttribute="top" secondItem="USy-De-phk" secondAttribute="bottom" constant="10" id="JoZ-ua-cZR"/>
+                <constraint firstItem="qko-t4-QXK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="M46-nK-HMc"/>
+                <constraint firstItem="USy-De-phk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UTM-lR-pzL"/>
+                <constraint firstAttribute="trailing" secondItem="qko-t4-QXK" secondAttribute="trailing" id="sVe-9i-C9G"/>
+                <constraint firstItem="qko-t4-QXK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" placeholder="YES" id="whn-Y7-my8"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="whn-Y7-my8"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
